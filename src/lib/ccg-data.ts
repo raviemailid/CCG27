@@ -12,6 +12,10 @@ export type Athlete = { id: number; name: string; city: string; discipline: stri
 const names = ['Marcus Johnson','Sophie Williams','Daniel Clarke','Amelia Taylor','Ethan Brooks','Oliver Wilson','Aino Virtanen','Elias Korhonen','Sofia Laine','Mikko Nieminen','Emilia Salonen','Leo Mäkinen','Lucas Peeters','Emma Dubois','Noah Janssens','Mila Laurent','Arthur De Smet','Louis Martin','Daan de Vries','Lotte Bakker','Sem van Dijk','Fleur Visser','Finn Jansen','Eva Smit'];
 const disciplines = ['100m Sprint','Long Jump','400m','Javelin Throw','800m','High Jump'];
 export const athletes: Athlete[] = names.map((name, i) => ({ id: i + 1, name, city: (cities[Math.floor(i / 6)]?.name || 'London'), discipline: disciplines[i % 6] || '100m Sprint', points: 74 + ((i * 17) % 73), initials: name.split(' ').map(n => n[0]).slice(0,2).join('') }));
+export type Rarity = 'bronze' | 'silver' | 'gold';
+export const rarityFor = (points: number): Rarity => points >= 120 ? 'gold' : points >= 100 ? 'silver' : 'bronze';
+export const maxTeamPower = [...athletes].map(a => a.points).sort((a, b) => b - a).slice(0, 10).reduce((sum, p) => sum + p, 0);
+export const squadTierFor = (power: number): Rarity => { const ratio = power / maxTeamPower; return ratio >= 0.8 ? 'gold' : ratio >= 0.6 ? 'silver' : 'bronze'; };
 export type Team = { id: string; name: string; city: string; athleteIds: number[]; points: number; owned: boolean };
 export const starterTeams: Team[] = [
  { id: 'track', name: 'Track_Stars', city: 'London', athleteIds: athletes.slice(0,10).map(a=>a.id), points: 1480, owned: false },
