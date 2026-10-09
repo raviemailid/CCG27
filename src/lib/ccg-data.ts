@@ -3,10 +3,10 @@ import helsinki from '@/assets/helsinki.jpg';
 import brussels from '@/assets/brussels.jpg';
 import amsterdam from '@/assets/amsterdam.jpg';
 export const cities = [
-  { name: 'London', code: 'LDN', flag: '🇬🇧', image: london, points: 2840, athletes: 24, className: 'city-london' },
-  { name: 'Helsinki', code: 'HEL', flag: '🇫🇮', image: helsinki, points: 2560, athletes: 22, className: 'city-helsinki' },
-  { name: 'Brussels', code: 'BRU', flag: '🇧🇪', image: brussels, points: 2310, athletes: 23, className: 'city-brussels' },
-  { name: 'Amsterdam', code: 'AMS', flag: '🇳🇱', image: amsterdam, points: 2180, athletes: 24, className: 'city-amsterdam' },
+  { name: 'London', code: 'LDN', flag: '🇬🇧', image: london, points: 2840, athletes: 82, className: 'city-london' },
+  { name: 'Helsinki', code: 'HEL', flag: '🇫🇮', image: helsinki, points: 2560, athletes: 79, className: 'city-helsinki' },
+  { name: 'Brussels', code: 'BRU', flag: '🇧🇪', image: brussels, points: 2310, athletes: 81, className: 'city-brussels' },
+  { name: 'Amsterdam', code: 'AMS', flag: '🇳🇱', image: amsterdam, points: 2180, athletes: 80, className: 'city-amsterdam' },
 ];
 export type Athlete = { id: number; name: string; city: string; discipline: string; points: number; initials: string };
 const names = ['Marcus Johnson','Sophie Williams','Daniel Clarke','Amelia Taylor','Ethan Brooks','Oliver Wilson','Aino Virtanen','Elias Korhonen','Sofia Laine','Mikko Nieminen','Emilia Salonen','Leo Mäkinen','Lucas Peeters','Emma Dubois','Noah Janssens','Mila Laurent','Arthur De Smet','Louis Martin','Daan de Vries','Lotte Bakker','Sem van Dijk','Fleur Visser','Finn Jansen','Eva Smit'];
