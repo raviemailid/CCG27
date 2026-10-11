@@ -9,6 +9,11 @@ export default defineConfig({
   plugins: [
     tanstackStart({
       server: { entry: "src/server.ts" },
+      nitro: {
+        prerender: {
+          routes: ['/', '/create', '/leaderboard', '/live', '/profile', '/teams'],
+        },
+      },
     }),
 
     react(),
