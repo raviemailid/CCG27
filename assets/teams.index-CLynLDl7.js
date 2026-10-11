@@ -1,0 +1,1 @@
+import{n as e}from"./teams-CFfMV5fM.js";var t=e;export{t as component};

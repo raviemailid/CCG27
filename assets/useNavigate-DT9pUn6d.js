@@ -1,0 +1,1 @@
+import{d as e,i as t,l as n}from"./useSelector-BcTnCC3_.js";var r=e(n(),1);function i(e){let n=t();return r.useCallback(t=>n.navigate({...t,from:t.from??e?.from}),[e?.from,n])}export{i as t};
