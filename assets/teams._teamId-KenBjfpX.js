@@ -1,0 +1,1 @@
+import{c as e}from"./useSelector-BcTnCC3_.js";import{t}from"./teams-BBGlDpB6.js";import{t as n}from"./index-BnXavmiz.js";var r=e();function i(){let{teamId:e}=n.useParams();return(0,r.jsx)(t,{teamId:e},e)}export{i as component};

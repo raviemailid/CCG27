@@ -1,1 +1,0 @@
-import{c as e}from"./useSelector-BcTnCC3_.js";import{r as t}from"./teams-CFfMV5fM.js";import{r as n}from"./index-BTKp4do7.js";var r=e();function i(){let{city:e}=n.useSearch();return(0,r.jsx)(t,{initialCity:e||`London`})}export{i as component};

@@ -1,0 +1,1 @@
+import{c as e}from"./useSelector-BcTnCC3_.js";import{t}from"./screens-CsdAcE-N.js";import{n}from"./index-BnXavmiz.js";var r=e();function i(){let{city:e}=n.useSearch();return(0,r.jsx)(t,{initialCity:e||``})}export{i as component};
