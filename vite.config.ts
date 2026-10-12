@@ -9,10 +9,9 @@ export default defineConfig({
   plugins: [
     tanstackStart({
       server: { entry: "src/server.ts" },
-      nitro: {
-        prerender: {
-          crawl: true,
-        },
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
       },
     }),
 

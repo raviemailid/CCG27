@@ -28,15 +28,18 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build:static
 
+      - name: Create 404 fallback for SPA routing
+        run: cp ./dist/client/index.html ./dist/client/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist/client
 
   deploy:
     needs: build
